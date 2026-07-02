@@ -7,11 +7,14 @@
     <title>HTML tutorial : 684259029</title>
     <!-- internal CSS -->
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: Arial, Helvetica, sans-serif;
             background-color: beige;
             margin: 50px 50px 50px 50px;
-            scroll-behavior: smooth;
+            line-height: 1.5;
         }
         h1 {
             color:rgb(230, 19, 65);
@@ -24,7 +27,22 @@
             background-color: rgb(221, 231, 177);
             padding: 20px 20px 20px 20px;
             border-left: 6px solid rgb(226, 50, 118);
+            white-space: pre-wrap;
+            font-size: 16px;
          }
+
+         a {
+            text-decoration: none;
+         }
+
+         a:hover {
+            color:brown;
+            /*text-decoration: underline; */
+         }
+
+        .text-center {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -90,6 +108,8 @@ content of web pages
     <h2 id="heading">Heading</h2>
     <p>workshop</p>
     <p>HTML headings are defined with the &lth1> to &lth6> tags..</p>
+    <a href="W03-01-Heading.html">Workshop 1<a>
+    <a href="W03-02-Heading.html">| Workshop 2<a>
     <pre>
     - &lt;h1&gt;: Heading 1
     - &lt;h2&gt;: Heading 2
@@ -263,7 +283,7 @@ content of web pages
     width: 150px;
     height: 150px;
     object-fit: cover;
-    }       
+    }
     </pre>
     <a href="#top">Back to Top</a>
 
@@ -279,7 +299,7 @@ content of web pages
     - &lt;table&gt;: Table
     - &lt;tr&gt;: Table row
     - &lt;th&gt;: Table header
-    - &lt;td&gt;: Table data/cell        
+    - &lt;td&gt;: Table data/cell
     </pre>
     <a href="#top">Back to Top</a>
 
@@ -318,7 +338,7 @@ content of web pages
     - autofocus: ให้ฟอร์มเริ่มต้นโฟกัส
     7. การส่งฟอร์ม (Form Submission)
     - การส่งข้อมูลไปยังเซิร์ฟเวอร์
-    - การใช้ JavaScript (เช่น onsubmit)        
+    - การใช้ JavaScript (เช่น onsubmit)
     </pre>
     <a href="#top">Back to Top</a>
 
@@ -333,7 +353,7 @@ content of web pages
     - &lt;section&gt;: Defines a section in a document
     - &lt;article&gt;: Defines an article
     - &lt;aside&gt;: Defines content aside from the page content
-    - &lt;footer&gt;: Defines a footer for a document or section        
+    - &lt;footer&gt;: Defines a footer for a document or section
     </pre>
     <a href="#top">Back to Top</a>
 
@@ -346,5 +366,11 @@ content of web pages
         <li>workshop 02 : login</li>
     </ul>
     <a href="#top">Back to Top</a>
-</body>
+
+    <hr>
+    <div class="text-center">
+        <p><a href="https://www.w3schools.com/html/default.asp">Learn more about HTML</a></p>
+        <p>&copy; 2026 Created by:684259029 :Ratipatkub</p>
+        </body>
+    </div>
 </html>
