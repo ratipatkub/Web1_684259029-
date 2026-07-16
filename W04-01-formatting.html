@@ -25,56 +25,157 @@
         </nav>
     </header>
     
-    <!-- Hero selection -->
+    <!-- Hero section -->
     <div class="hero">
-        <p>&lt;/></p>
+        <div class="hero-icon">&lt;/></div>
+        
+        <div class="hero-text">
         <h1>แบบฝึกปฏิบัติ: HTML Formatting</h1>
         <p>เรียนรู้การจัดรูปแบบข้อความด้วยแท็ก HTML พร้อมตัวอย่างและการตกแต่งด้วย CSS</p>
+        </div>
     </div>
     
     
     <!-- Main content -->
     <div class="container">
         <div class="card-grid">
-        <div class="card">
-        <p>📰ตัวอย่างผลลัพธ์</p>            
-        <p>B: <b>ข้อความตัวหนา</b></p>            
-        <p>Strong:<strong>ข้อความสำคัญ</strong></p>            
-        <p>I:<I>ข้อความตัวเอียง</I></p>            
-        <p>EM:<EM>ข้อความเน้นเสียง</EM></p>            
-        <p>U:<U>ข้อความขีเส้นใต้</U></p>            
-        <p>MARK:<mark>ข้อความที่ถูกเน้น</mark></p>            
-        <p>SMALL:<small>ข้อความขนาดเล็ก</small></p>            
-        <p>DEL:<del>ข้อความที่ถูกลบ</del></p>            
-        <p>SUP:x<sup>2</sup></p>            
-        <p>SUB:H<sub>2</sub>0</p>            
-        </div> 
-        <div class="card">
-            <p> &lt;/> ตัวอย่างโค้ด HTML</p>
-            <code>
-                <p>1&lt;b>ข้อความตัวหนา&lt;/b></p>
-                <p>2&lt;strong>ข้อความสำคัญ&lt;/strong></p>
-                <p>3&lt;i>ข้อความตัวเอียง&lt;/i></p>
-                <p>4&lt;em>ข้อความเน้นเสียง&lt;/em></p>
-                <p>5&lt;u>ข้อความขีเส้นใต้&lt;/u></p>
-                <p>6&lt;mark>ข้อความที่ถูกเน้น&lt;/mark></p>
-                <p>7&lt;small>ข้อความขนาดเล็ก&lt;/small></p>
-                <p>8&lt;del>ข้อความที่ถูกลบ&lt;/del></p>
-                <p>9x&lt;sup>2&lt;/sup></p>
-                <p>10H&lt;sub>2&lt;/sub>O</p>
-                </code>
-        </div>    
-        <div class="card">
-            <p>🎯กิจกรรมฝึกปฏิบัติ</p>
-            <ul>
-                <li>√ ให้นักศึกษาสร้างหน้าเว็บ 1 หน้า</li>
-                <li>√ ใช้แท็ก formatting อย่างน้อย 6 รูปแบบ</li>
-                <li>√ ทดลองเปรียบเทียบ &lt;b> กับ &lt;strong> และ &lt;i> กับ &lt;em></li>
-                <li>√ ปรับสี ขนาด และพื้นหลังด้วย css</li>
-                <li>√ บันทึกไฟล์ชื่อ formatting.html</li>
-            </ul>
-        </div>    
+            <!-- card 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-header-icon">🖥</span> ตัวอย่างผลลัพธ์
+                </div>
+
+                <div class="card-body">
+                    <div class="format-row">
+                        <span class="label b-label">B:</span>
+                        <b>ข้อความตัวหนา</b>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label strong-label">STRONG:</span>
+                        <strong>ข้อความสำคัญ</strong>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label i-label">I:</span>
+                        <i>ข้อความตัวเอียง</i>
+                    </div>
+                    <div class="format-row">
+                        <span class="label em-label">EM:</span>
+                        <em>ข้อความเน้นเสียง</em>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label u-label">U:</span>
+                        <u>ข้อความขีดเส้นใต้</u>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label mark-label">MARK:</span>
+                        <mark>ข้อความที่ถูกเน้น</mark>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label small-label">SMALL:</span>
+                        <small>ข้อความขนาดเล็ก</small>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label del-label">DEL:</span>
+                        <del>ข้อความที่ถูกลบ</del>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label sup-label">SUP:</span>
+                        <span>x<sup>2</sup></span>
+                    </div>
+
+                    <div class="format-row">
+                        <span class="label sub-label">SUB:</span>
+                        <span>H<sub>2</sub>O</span>
+                    </div>
+
+                </div>
+
+
+            </div>
+        <!-- Card 2 -->
+            <div class="card">
+
+                <div class="card-header">
+                    <span class="card-header-icon">&lt;/&gt;</span>
+                    ตัวอย่างโค้ด HTML
+                </div>
+                <div class="card-body">
+                    <div class="pre-box">
+<pre><span class="line-no">1</span><span class="html-tag">&lt;b&gt;</span><span>ข้อความตัวหนา</span><span class="html-tag">&lt;/b&gt;</span>
+<span class="line-no">2</span><span class="html-tag">&lt;strong&gt;</span><span>ข้อความสำคัญ</span><span class="html-tag">&lt;/strong&gt;</span>
+<span class="line-no">3</span><span class="html-tag">&lt;i&gt;</span><span>ข้อความตัวเอียง</span><span class="html-tag">&lt;/i&gt;</span>
+<span class="line-no">4</span><span class="html-tag">&lt;em&gt;</span><span>ข้อความเน้นเสียง</span><span class="html-tag">&lt;/em&gt;</span>
+<span class="line-no">5</span><span class="html-tag">&lt;u&gt;</span><span>ข้อความขีดเส้นใต้</span><span class="html-tag">&lt;/u&gt;</span>
+<span class="line-no">6</span><span class="html-tag">&lt;mark&gt;</span><span>ข้อความที่ถูกเน้น</span><span class="html-tag">&lt;/mark&gt;</span>
+<span class="line-no">7</span><span class="html-tag">&lt;small&gt;</span><span>ข้อความขนาดเล็ก</span><span class="html-tag">&lt;/small&gt;</span>
+<span class="line-no">8</span><span class="html-tag">&lt;del&gt;</span><span>ข้อความที่ถูกลบ</span><span class="html-tag">&lt;/del&gt;</span>
+<span class="line-no">9</span><span>x</span><span  class="html-tag">&lt;sup&gt;</span><span>2</span><span class="html-tag">&lt;/sup&gt;</span>
+<span class="line-no">10</span><span>H</span><span  class="html-tag">&lt;sub&gt;</span><span>2</span><span class="html-tag">&lt;/sub&gt;</span><span>O</span></pre>
+                    </div>
+                </div>
+
+
+
+            </div>    
+        <!-- card 3 -->
+            <!-- card 3 -->
+            <div class="card">
+
+
+                <span>🎯</span>
+
+                กิจกรรมฝึกปฏิบัติ
+
+
+                <ul class="">
+                    <li>
+                        <span>✓</span>
+                        <span>ให้นักศึกษาสร้างหน้าเว็บ 1 หน้า</span>
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        <span>ใช้แท็ก formatting อย่างน้อย 6 รูปแบบ</span>
+                    </li>
+
+                    <li>
+                        <span >✓</span>
+                        <span>
+                            ทดลองเปรียบเทียบ
+                            <span>&lt;b&gt;</span> กับ
+                            <span>&lt;strong&gt;</span>
+                            และ
+                            <span>&lt;i&gt;</span> กับ
+                            <span>&lt;em&gt;</span>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        <span>ปรับสี ขนาด และพื้นหลังบางข้อความด้วย CSS</span>
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        <span>
+                            บันทึกไฟล์ชื่อ
+                            <span>formatting.html</span>
+                        </span>
+                    </li>
+                </ul>
+
+
+
+            </div>
         </div>
+
 
         <div class="tip-box">
             <h3>เกร็ดความรู้</h3>

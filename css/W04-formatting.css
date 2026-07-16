@@ -5,70 +5,207 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(245, 245, 220);
-    line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(245, 245, 220);
+  line-height: 1.6;
 }
- 
+
 footer,
-.hero,
-.card,
+/* .hero, */
+/* .card, */
 .tip-box {
-    border: 1px solid black;
-    background-color: white;
-    margin: 20px;
-    padding: 20px;
+  border: 1px solid black;
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
 }
-
+/* ===========================================
+----------------------Header------------------ 
+===============================================*/
 header {
-            background: linear-gradient(
-          to right,
-          rgb(245, 114, 63),
-          rgba(255, 0, 0, 0.123));
-          color: white;
-          padding: 20px;
+  background: linear-gradient(
+    to right,
+    rgb(245, 114, 63),
+    rgba(255, 0, 0, 0.123)
+  );
+  color: white;
+  padding: 20px;
 
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.308);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.308);
 }
 
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.brand-icon {font-size: 50px;}
-.brand-text p {font-size: 14px;}
-
+.brand-icon {
+  font-size: 50px;
+}
+.brand-text p {
+  font-size: 14px;
+}
+/* navigation */
 nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
 }
 
 nav a:hover {
-    color: white;
-    text-decoration: underline;
-    margin-left: 20px;
-    }
+  color: white;
+  text-decoration: underline;
+  margin-left: 20px;
+}
+/* hero section */
+.hero {
+  display: flex;
+  gap: 10px;
 
+  padding: 40px;
+}
+.hero-icon {
+  background-color: #325bcf;
+  color: #fff;
+  border-radius: 15px;
 
-    .container {
-        max-width: 1200px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 50px;
+  width: 90px;
+  height: 90px;
 
-        background-color: rgb(255, 194, 137);
-      }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.hero-text h1 {
+  font: size 40px;
+  color: #1a2d78;
+}
+.hero-text p {
+  font-size: 16px;
+  color: #474748;
+}
+
+/* Main content */
+.container {
+  /* max-width: 1200px; */
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+
+  /* background-color: rgb(255, 194, 137); */
+}
 
 .card-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(3, 1fr);
 
-    background-color: rgb(242, 255, 168);
+  /* background-color: rgb(242, 255, 168); */
+  gap: 20px;
+}
+.card {
+  background-color: #fff;
+
+  border-radius: 16px;
+  box-shadow: 8px 8px 8px gray;
+  border: 1px solid rgba(8, 8, 1, 0.651);
+
+  /* padding: 20px; */
+  overflow: hidden;
+}
+.card-header {
+  background-color: #ff66008a;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: bold;
+
+  padding: 20px;
+  border-bottom: 1px solid rgba(8, 8, 1, 0.651);
+}
+.card-header-icon {
+  background-color: #ff7d32;
+  color: white;
+  border-radius: 50%;
+  /* padding: 10px; */
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-body {
+  padding: 20px;
+}
+.format-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+
+  margin-bottom: 4px;
+  gap: 20px;
+  border-bottom: 1px solid black;
+  padding: 6px 0px;
+}
+.label {
+  /* padding: 4px 30px; */
+
+  border-radius: 8px;
+
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.b-label {
+  background-color: red;
+}
+.strong-label {
+  background-color: rgb(0, 255, 64);
+}
+.i-label {
+  background-color: rgb(76, 0, 255);
+}
+.em-label {
+  background-color: rgb(255, 145, 0);
+}
+.u-label {
+  background-color: rgb(255, 196, 0);
+}
+.mark-label {
+  background-color: rgba(0, 255, 128, 0.466);
+}
+.small-label {
+  background-color: rgba(255, 0, 0, 0.39);
+}
+.del-label {
+  background-color: rgb(255, 0, 200);
+}
+.sup-label {
+  background-color: rgba(89, 0, 255, 0.541);
+}
+.sub-label {
+  background-color: rgba(231, 9, 9, 0.938);
+}
+/* card-2 */
+.pre-box {
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  padding: 20px;
+}
+.html-tag {
+  color: red;
+}
+.line-no {
+  color: gray;
+  margin-right: 20px;
+  display: inline-block;
+  width: 20px;
 }
