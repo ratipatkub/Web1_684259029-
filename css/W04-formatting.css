@@ -138,8 +138,12 @@ nav a:hover {
   align-items: center;
 }
 
-.purple-bg {background-color: #ff7d32;}
-.purple-text {color: white;}
+.purple-bg {
+  background-color: #ff7d32;
+}
+.purple-text {
+  color: white;
+}
 
 .card-body {
   padding: 20px;
@@ -192,6 +196,7 @@ nav a:hover {
 .sub-label {
   background-color: rgba(231, 9, 9, 0.938);
 }
+
 /* card-2 */
 .pre-box {
   background-color: black;
@@ -208,15 +213,15 @@ nav a:hover {
   display: inline-block;
   width: 20px;
 }
+
 /* card 3 */
 .activity-list {
   list-style: none;
 }
 
-.activity-list li{
+.activity-list li {
   margin-bottom: 20px;
   padding: 5px 10px;
-
 }
 
 .check {
@@ -234,11 +239,21 @@ nav a:hover {
   width: 38px;
 }
 
-.check-blue{background-color: blue;}
-.check-green{background-color: green;}
-.check-red{background-color: red;}
-.check-purple{background-color: purple;}
-.check-skyblue{background-color: rgb(0, 225, 241);}
+.check-blue {
+  background-color: blue;
+}
+.check-green {
+  background-color: green;
+}
+.check-red {
+  background-color: red;
+}
+.check-purple {
+  background-color: purple;
+}
+.check-skyblue {
+  background-color: rgb(0, 225, 241);
+}
 
 .tip-box {
   border: 1px solid black;
