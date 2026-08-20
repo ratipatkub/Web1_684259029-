@@ -5,11 +5,7 @@
 }
 
 body {
-  font-family:
-    'Kanit',
-    Arial,
-    Helvetica,
-    sans-serif;
+  font-family: "Kanit", Arial, Helvetica, sans-serif;
   background-color: rgb(255, 240, 240);
   color: rgb(70, 70, 70);
   line-height: 1.6;
@@ -103,10 +99,9 @@ body {
   display: grid;
   grid-template-columns: 1fr 390px;
   /* grid-template-columns: 80% 20%; */
-  
+
   padding: 20px 22px;
 }
-
 
 /* left content */
 .left-content {
@@ -124,7 +119,11 @@ body {
 
   padding: 26px 36px;
 
-  background: linear-gradient(110deg, rgb(239, 241, 234), rgba(255, 238, 0, 0.808));
+  background: linear-gradient(
+    110deg,
+    rgb(239, 241, 234),
+    rgba(255, 238, 0, 0.808)
+  );
   border-radius: 15px;
   box-shadow: 0px 4px 5px #00000067;
 
@@ -132,38 +131,150 @@ body {
 }
 
 .hero-text h1 {
-font-size: 36px;
-color: rgb(112, 112, 112);
-line-height: 1.8;
+  font-size: 36px;
+  color: rgb(112, 112, 112);
+  line-height: 1.8;
 }
 
 .hero-text p {
-font-size: 22px;
-color: rgb(112, 112, 112);
-font-weight: 600;
+  font-size: 22px;
+  color: rgb(112, 112, 112);
+  font-weight: 600;
 }
 
 .hero-photo img {
-    width: 400px;
-    height: 200px;
-    border: 3px solid rgb(204, 253, 159);
-    border-radius: 10px;
+  width: 400px;
+  height: 200px;
+  border: 3px solid rgb(204, 253, 159);
+  border-radius: 10px;
 
-    box-shadow: 0px 4px 5px #00000067;
+  box-shadow: 0px 4px 5px #00000067;
 
-    object-fit: cover;
-        /*
+  object-fit: cover;
+  /*
     object-fit: contain ➡️เห็นภาพครบ รักษาสัดส่วน (อาจมีขอบว่าง)
     object-fit: fill ➡️ยืดภาพให้เต็มกล่อง ภาพอาจบิด (สัดส่วนเพี้ยน)
     object-fit: cover ➡️ครอปภาพให้เต็มกล่อง รักษาสัดส่วน บางส่วนของภาพจะถูกตัดออก
     */
 }
 
+/* Link Example */
+
 .card {
-  border: 1px solid rgb(21, 255, 0);
-  padding: 15px;
-  margin: 15px;
+  border: 1px solid rgba(92, 92, 92, 0.377);
+  border-radius: 15px;
+  background-color: white;
+  
+  padding: 26px 36px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 5px #00000067;
+
+  margin-top: 20px;
 }
+
+.card-header-title{
+  /* background-color: aquamarine; */
+}
+.card-header-title h2{
+  color: rgb(112, 112, 112);
+}
+.card-body-grid{
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr ;
+    gap: 20px;
+}
+
+/* กล่อง Link ด้านซ้าย */
+.result-panel, .code-panel{
+    border: 1px solid rgba(92, 92, 92, 0.377);
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.result-panel-header, .code-panel-header{
+  background-color: rgb(255, 238, 0, 0.808);
+  color: rgb(112, 112, 112);
+  font-weight: bold;
+
+  padding: 0px 20px;
+}
+
+
+.result-panel-body{
+  line-height: 2;
+  padding: 5px 20px 10px 20px;
+
+}
+.result-panel-body a {
+  display: block;
+
+  color: blue;
+}
+.result-panel-body a:hover {
+color: red;
+}
+
+.back-btn {
+  border: 2px solid blue;
+  border-radius: 10px;
+
+  display: inline-block !important;
+  padding: 0 20px;
+
+  text-decoration: none;
+}
+.result-panel-mail{
+  background-color: rgb(21, 4, 255);
+  border-radius: 4px;
+  margin: 10px;
+}
+
+
+
+
+/* กล่อง link ด้านขวา */
+.code-panel{
+ background-color: black;
+}
+
+
+.code-panel-body{
+ color: white; 
+}
+
+.code-list{
+  padding: 16px 40px;
+}
+
+.code-list li{
+  padding: 0px 20px;
+}
+
+.tag {
+  color: red;
+}
+
+.value {
+  color: green;
+}
+
+.attr {
+  color: greenyellow;
+}
+
+
+/* image example */
+.result-panel-body-3g{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  padding: 0px 20px;
+align-items: baseline;
+text-align: center;
+}
+
 
 /* right content */
 .right-sidebar {
@@ -171,10 +282,11 @@ font-weight: 600;
   padding: 15px;
   margin: 15px;
 }
-.side-card {}
+.side-card {
+}
 
-.submit-card {}
-
+.submit-card {
+}
 
 /* ========================================
                 Footer Section
