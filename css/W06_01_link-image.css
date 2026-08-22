@@ -97,7 +97,7 @@ body {
   margin: 15px; */
 
   display: grid;
-  grid-template-columns: 1fr 390px;
+  grid-template-columns: 1fr 400px;
   /* grid-template-columns: 80% 20%; */
 
   padding: 20px 22px;
@@ -244,7 +244,7 @@ color: red;
 }
 
 .code-list{
-  padding: 16px 40px;
+  padding: 10px 40px;
 }
 
 .code-list li{
@@ -278,11 +278,45 @@ text-align: center;
 
 /* right content */
 .right-sidebar {
-  border: 1px solid rgb(21, 255, 0);
+  /* border: 1px solid rgb(21, 255, 0); */
   padding: 15px;
   margin: 15px;
 }
 .side-card {
+  border: 1px solid rgba(92, 92, 92,  0.377);
+  background-color: white;
+padding:  10px 10px;
+ 
+}
+.side-card-header {
+  font-size: 20px;
+  padding: 0px 20px;
+}
+
+.side-card-body{
+  color: aliceblue;
+}
+
+.side-card-activity-list{
+  list-style: none;
+  color: rgb(5, 5, 5);
+  padding: 10px 20px;
+}
+
+.side-number{
+  color: rgb(168, 165, 165);
+  font-weight: bold;
+  font-size: 20px;
+  background-color:yellow ;
+
+  border: 1px;
+  border-radius: 50%;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  width: 28px;
 }
 
 .submit-card {
