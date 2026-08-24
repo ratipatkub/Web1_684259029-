@@ -278,19 +278,23 @@ text-align: center;
 
 /* right content */
 .right-sidebar {
-  /* border: 1px solid rgb(21, 255, 0); */
-  padding: 15px;
-  margin: 15px;
+  border: 1px solid rgb(21, 255, 0);
+  padding: 0px 0px 0px 10px;
+  /* margin: 15px; */
 }
-.side-card {
+.side-card{
   border: 1px solid rgba(92, 92, 92,  0.377);
   background-color: white;
-padding:  10px 10px;
+  padding:  20px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 5px #00000067;
  
 }
-.side-card-header {
+.side-card-header, .side-card-tag-header {
   font-size: 20px;
   padding: 0px 20px;
+  display: flex;
+  align-items: center;
 }
 
 .side-card-body{
@@ -318,6 +322,71 @@ padding:  10px 10px;
   height: 28px;
   width: 28px;
 }
+
+
+/* card2 */
+.side-card-tag {
+  border: 1px solid rgba(92, 92, 92,  0.377);
+  background-color: white;
+  padding:  5px 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0px 4px 5px #00000067;
+}
+.side-card-tag-body{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  text-align: center;
+  padding: 20px;
+}
+
+.side-card-tag-text{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  padding: 10px 20px;
+  align-items: baseline;
+  text-align: center;
+  border: 10px;
+  margin: 6px 4px;
+  border-radius: 20px;
+}
+
+.tag-green{
+  background-color: rgba(0, 255, 0, 0.178);
+  color: rgb(2, 190, 2);
+  
+}
+.tag-yel{
+  background-color: rgba(255, 197, 5, 0.178);
+  color: rgb(163, 125, 0);
+}
+.tag-blue{
+  background-color: rgba(55, 0, 252, 0.24);
+  color: rgba(55, 0, 252, 0.555);
+}
+.tag-reds{
+  background-color: rgba(229, 255, 0, 0.219);
+  color: rgba(168, 187, 0, 0.986);
+}
+.tag-pink{
+  background-color: rgba(255, 0, 242, 0.404);
+  color: rgba(153, 0, 145, 0.404);
+}
+.tag-violet{
+  color: rgba(124, 0, 58, 0.459);
+  background-color: rgba(255, 0, 119, 0.459);
+}
+.tag-brown{
+  color: rgba(141, 68, 0, 0.555);
+  background-color: rgba(252, 122, 0, 0.555);
+}
+.tag-red{
+  color: rgba(189, 0, 0, 0.603);
+  background-color: rgba(255, 0, 0, 0.452);
+}
+
 
 .submit-card {
 }
