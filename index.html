@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learning aboutHTML">
     <title>HTML tutorial : 684259029</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
     <!-- internal CSS -->
     <style>
         html {
@@ -12,26 +18,66 @@
         }
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: beige;
+            background-color: rgba(255, 174, 0, 0.116);
             margin: 50px 50px 50px 50px;
             line-height: 1.5;
         }
         h1 {
-            color:rgb(230, 19, 65);
+            font-size: 50px;
+            color:#ff7d32;
             text-align: center; 
-         }
+            border: 5px inset rgb(255, 166, 0);
+            background-color: rgba(250, 235, 215, 0.582);
+            border-radius: 30px;
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.452);
+        }
         h2 {
             color:rgb(230, 19, 65);
-         }
-         pre {
-            background-color: rgb(221, 231, 177);
-            padding: 20px 20px 20px 20px;
-            border-left: 6px solid rgb(226, 50, 118);
-            white-space: pre-wrap;
-            font-size: 16px;
+            margin-top: 30px;
          }
 
-         a {
+          ul {
+            display: grid;
+            grid-template-columns: repeat(6, 2fr);
+            list-style-type: none;
+            padding: 0;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        ul li {
+            background-color: rgb(243, 226, 179);
+            border: 4px outset beige;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            font-weight: bold;
+        }
+        ul li {
+        text-decoration: none;
+
+       transition: 0.5s;
+}
+
+        ul li:hover {
+            background-color: rgba(248, 225, 16, 0.493);
+        }
+
+         pre {
+            background-color: rgb(255, 212, 147);
+            padding: 20px 20px 20px 20px;
+            border: 10px none rgba(196, 194, 194, 0.575);
+            border-radius:15px;
+            border-left: 6px solid rgb(255, 196, 1);
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+         }
+
+         a  {
+            font-weight: bold;
             text-decoration: none;
          }
 
@@ -43,32 +89,45 @@
         .text-center {
             text-align: center;
         }
+
+        .back-to-top{
+            background-color: rgb(243, 226, 179);
+            border: 4px groove beige;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            font-weight: bold;
+        }
+        
+        .sub-title{
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <h1 id="top">HTML tutorial</h1>
     <hr>
-    <p>Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
+    <p class="sub-title">Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
 
    <!-- Topic  -->
     <h2>Topics</h2>
     <ul>
-        <li><a href="#introduction">Introduction to HTML</a></li>
-        <li><a href="#structure">HTML Document Structure</a></li>
-        <li><a href="#heading">Heading</a></li>
-        <li><a href="#paragraph">Paragraph</a></li>
-        <li><a href="#text formatting">Text Formatting</a></li>
-        <li><a href="#link">Creating Links</a></li>
-        <li><a href="#list">Lists (Ordered and Unordered)</a></li>
-        <li><a href="#image">Adding Images</a></li>
-        <li><a href="#creating tables">Creating Tables</a></li>
-        <li><a href="#forms">HTML Forms</a></li>
+        <li><a href="#introduction">💡 Introduction to HTML</a></li>
+        <li><a href="#structure">📃 HTML Document Structure</a></li>
+        <li><a href="#heading">🤕 Heading</a></li>
+        <li><a href="#paragraph">👨‍🎓 Paragraph</a></li>
+        <li><a href="#text formatting">📑 Text Formatting</a></li>
+        <li><a href="#link">🔗 Creating Links</a></li>
+        <li><a href="#list">📰 Lists (Ordered and Unordered)</a></li>
+        <li><a href="#image">📷 Adding Images</a></li>
+        <li><a href="#creating tables">🪑 Creating Tables</a></li>
+        <li><a href="#forms">🔹 HTML Forms</a></li>
         <li><a href="">Embedding Multimedia (Audio & Video)</a></li>
-        <li><a href="#semantic HTML">Semantic HTML</a></li>
+        <li><a href="#semantic HTML">👏 Semantic HTML</a></li>
     </ul>
     <hr>
     <!-- Content introductuon -->
-    <h2 id="introduction">Introduction to HTML</h2>
+    <h2 id="introduction">💡Introduction to HTML</h2>
     <pre>
     - HTML stands for Hyper Text Markup Language
     - HTML is the standard markup language for creating Web pages
@@ -81,12 +140,12 @@
     - HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and
 content of web pages
     - HTML is not a programming language, but a markup language</pre> 
-    <a href="#top">Back to Top</a>
+    <a href="#top" class="back-to-top">Back to Top</a>
     
     
     <!-- Content -->
-    <h2 id="structure">HTML Document Structure</h2>
-    <p>An HTML document has the following basic structure...</p>
+    <h2 id="structure">📃HTML Document Structure</h2>
+    <p class="sub-title">An HTML document has the following basic structure...</p>
     <pre>
     &lt;!DOCTYPE html&gt;: ระบุว่าเป็นเอกสาร HTML5
     &lt;html&gt;: เป็นรากของเอกสาร HTML ทั้งหมด
@@ -100,14 +159,13 @@ content of web pages
     - ใช้เพื่อกำหนดคุณสมบัติเพิ่มเติม เช่น href, src, width, height
     ตัวอย่าง: &lt;h1&gt;Hello, World!&lt;/h1&gt;
     &lt;img src="image.jpg" alt="A description of the image"&gt;</pre>
-    <a href="#top">Back to Top</a>
+    <a href="#top" class="back-to-top">Back to Top</a>
 
 
 
     <!-- Content -->
-    <h2 id="heading">Heading</h2>
-    <p>workshop</p>
-    <p>HTML headings are defined with the &lth1> to &lth6> tags..</p>
+    <h2 id="heading">🤕Heading</h2>
+    <p class="sub-title">HTML headings are defined with the &lth1> to &lth6> tags..</p>
     <a href="W03-01-Heading.html">Workshop 1<a>
     <a href="W03-02-Heading.html">| Workshop 2<a>
     <pre>
@@ -118,25 +176,23 @@ content of web pages
     - &lt;h5&gt;: Heading 5
     - &lt;h6&gt;: Heading 6
     </pre>
-    <a href="#top">Back to Top</a>
+    <a href="#top" class="back-to-top">Back to Top</a>
 
 
 
     <!-- Content -->
-    <h2 id="paragraph">Paragraph</h2>
-    <p>workshop</p>
-    <p>HTML paragraphs are defined witg the &lt;p> tag...</p>
+    <h2 id="paragraph">👨‍🎓Paragraph</h2>
+    <p class="sub-title">HTML paragraphs are defined witg the &lt;p> tag...</p>
     <pre>
     - &lt;p&gt;: Paragraph
     </pre>
-    <a href="#top">Back to Top</a>
+    <a href="#top" class="back-to-top">Back to Top</a>
 
 
 
     <!-- Content -->
-    <h2 id="text formatting">Text Formatting</h2>
-    <p>workshop</p>
-    <p>HTML provides various elements to format text...</p>
+    <h2 id="text formatting">📑Text Formatting</h2>
+    <p class="sub-title">HTML provides various elements to format text...</p>
     <a href="W04-01-formatting.html">Workshop1</a>
     <pre>
     - &lt;h1&gt; to &lt;h6&gt;: Headings
@@ -160,15 +216,14 @@ content of web pages
     - &lt;q&gt;: Inline quotation
     - &lt;code&gt;: Code snippet
     </pre>
-    <a href="#top">Back to Top</a>
+    <a href="#top" class="back-to-top">Back to Top</a>
 
 
 
 
     <!-- Content -->
-    <h2 id="link">Creating Links</h2>
-    <p>workshop</p>
-    <p>HTML links are defined with the &lt;a> tag...</p>
+    <h2 id="link">🔗Creating Links</h2>
+    <p class="sub-title">HTML links are defined with the &lt;a> tag...</p>
     <a href="W06_01_link-image.html">Workshop1</a>
     <pre>
     - &lt;a href="url" target=""&gt;Link text&lt;/a&gt;
@@ -191,13 +246,13 @@ content of web pages
     - Use the download attribute to create a download link
     - Example: &lt;a href="file.txt" download&gt;Download Text File&lt;/a&gt;
     </pre>
-    <a href="#top">Back to Top</a>
+    <a href="#top" class="back-to-top">Back to Top</a>
 
 
     <!-- Content -->
-    <h2 id="list">Lists (Ordered and Unordered)</h2>
+    <h2 id="list">📰Lists (Ordered and Unordered)</h2>
     <p>workshop</p>
-    <p>HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...</p>
+    <p class="sub-title">HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...</p>
     <pre>
     - &lt;ul&gt;: Unordered list
     - &lt;ol&gt;: Ordered list
@@ -239,14 +294,13 @@ content of web pages
     - Example: &lt;ol style="list-style-type: upper-roman;"&gt;
     - Example: &lt;ol style="list-style-type: lower-roman;"&gt;
     </pre>
-    <a href="#top">Back to Top</a>
+    <a href="#top" class="back-to-top">Back to Top</a>
 
 
 
     <!-- Content -->
-    <h2 id="image">Adding Images</h2>
-    <p>workshop</p>
-    <p>HTML images are defined with the &lt;img&gt; tag...</p>
+    <h2 id="image">📷Adding Images</h2>
+    <p class="sub-title">HTML images are defined with the &lt;img&gt; tag...</p>
     <a href="W06_01_link-image.html">Workshop1</a>
     <pre>
     - &lt;img src="url" alt="description"&gt;
@@ -288,29 +342,29 @@ content of web pages
     object-fit: cover;
     }
     </pre>
-    <a href="#top">Back to Top</a>
+    <a href="#top" class="back-to-top">Back to Top</a>
 
 
 
 
     <!-- Content -->
-    <h2 id="creating tables">Creating Tables</h2>
+    <h2 id="creating tables">🪑Creating Tables</h2>
     <p>Workshop 1</p>
     <p>Workshop 2</p>
-    <p>HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...</p>
+    <p class="sub-title">HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...</p>
     <pre>
     - &lt;table&gt;: Table
     - &lt;tr&gt;: Table row
     - &lt;th&gt;: Table header
     - &lt;td&gt;: Table data/cell
     </pre>
-    <a href="#top">Back to Top</a>
+    <a href="#top" class="back-to-top">Back to Top</a>
 
 
 
     <!-- Content -->
-    <h2 id="forms">HTML Forms</h2>
-    <p>HTML forms are defined with the &lt;form&gt; tag...</p>
+    <h2 id="forms">🔹HTML Forms</h2>
+    <p class="sub-title">HTML forms are defined with the &lt;form&gt; tag...</p>
     <pre>
     หัวข้อเกี่ยวกับฟอร์ม
     1. โครงสร้างพื้นฐานของฟอร์ม
@@ -343,13 +397,13 @@ content of web pages
     - การส่งข้อมูลไปยังเซิร์ฟเวอร์
     - การใช้ JavaScript (เช่น onsubmit)
     </pre>
-    <a href="#top">Back to Top</a>
+    <a href="#top" class="back-to-top">Back to Top</a>
 
 
 
     <!-- Content -->
     <h2 id="semantic HTML">Semantic HTML</h2>
-    <p>Semantic HTML elements clearly define the content of a web page...</p>
+    <p class="sub-title">Semantic HTML elements clearly define the content of a web page...</p>
     <pre>
     - &lt;header&gt;: Defines a header for a document or section
     - &lt;nav&gt;: Defines navigation links
@@ -358,7 +412,7 @@ content of web pages
     - &lt;aside&gt;: Defines content aside from the page content
     - &lt;footer&gt;: Defines a footer for a document or section
     </pre>
-    <a href="#top">Back to Top</a>
+    <a href="#top" class="back-to-top">Back to Top</a>
 
 
 
@@ -368,9 +422,11 @@ content of web pages
         <li>workshop 01 : rabbit</li>
         <li>workshop 02 : login</li>
     </ul>
-    <a href="#top">Back to Top</a>
+    <a href="#top" class="back-to-top">Back to Top</a>
 
+    <p>
     <hr>
+    
     <div class="text-center">
         <p><a href="https://www.w3schools.com/html/default.asp">Learn more about HTML</a></p>
         <p>&copy; 2026 Created by:684259029 :Ratipatkub</p>
