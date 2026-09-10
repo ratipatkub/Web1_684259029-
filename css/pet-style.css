@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: linear-gradient(135deg, #fef0e0 0%, #ffffff 50%, #fdffe8 100%);
+}
+
+.container {
+        max-width: 1320px;
+
+        margin: 0 auto;
+}
+
+:root {
+    /* สีหลักของเว็บ */
+    --primary-color : rgb(245, 151, 74);
+    --primary-dark-color : rgb(224, 115, 26);
+    --secondary-color : rgb(248, 171, 27);
+
+
+    /* สีข้อความ */
+    --text-color : black;
+
+    --nav-text-color : #374151;
+
+    --light-text-color : #ffffff;
+
+    /* สีพื้น */
+    --btn-bg-color: rgb(212, 9, 212);
+    --footer-bg-color: black;
+
+    /* สีเงา */
+    --header-shadow : 0 4px 8px rgba(0, 0, 0, 0.18);
+    --card-shadow : 0 3px 10px rgba(0, 0, 0, 0.18);
+
+    /* สีขอบ */
+    --border-color : rgb(255, 198, 75);
+    --muted-text-color : rgba(0, 0, 0, 0.384);
+}
+
+/* ====================================
+               Header
+=======================================*/
+
+.header {
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+
+    box-shadow: var(--header-shadow);
+    
+    position: sticky;
+    top: 0;
+
+    z-index: 999;
+}
+
+.header-content { 
+    text-align: center;
+    padding-block: 1.5rem;
+}
+
+.header-title {
+    color: var(--primary-color);
+
+    font-size: clamp(2rem, 5vw, 3rem);
+
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+.header-subtitle {
+    color: var(--muted-text-color);
+}
+
+/* ====================================
+               Nav
+=======================================*/
+
+nav {
+    padding-block: 2rem;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--nav-text-color);
+
+    padding: 0.65rem 1.2rem;
+    box-shadow: var(--card-shadow);
+    border-radius: 999px;
+
+    margin: 0.3rem;
+
+    transition: transform 0.5s;
+    display: inline-block;
+}
+
+nav a:hover {
+    transform: translateY(-10px);
+}
+
+nav a.active {
+    background-color: var(--btn-bg-color);
+    color: var(--light-text-color);
+}
+
+
+
+
+/* ====================================
+               Main
+=======================================*/
+
+.page-title {
+    text-align: center;
+    margin: 1.5rem;
+}
+
+.pet-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    
+}
+
+.pet-card {
+    border: var(--border-color);
+    box-shadow: var(--card-shadow);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+
+.pet-card:hover{
+    transform: translateY(-4px);
+    box-shadow: var(--header-shadow);
+}
+
+
+.pet-card img {
+    height: 16.25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.pet-content {
+ padding: 1.25rem;
+}
+
+.pet-content h2{
+ color: var(--primary-dark-color);
+}
+
+.breed {
+    color: var(--muted-text-color);
+}
+
+
+
+/* ====================================
+               Footer
+=======================================*/
+
+footer {
+    background-color: var(--footer-bg-color);
+    text-align: center;
+
+    color: var(--light-text-color);
+
+    padding-block: 2rem;
+    margin-top: 2rem;
+}
+
+
+/* ====================================
+               Responsive
+=======================================*/
