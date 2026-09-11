@@ -36,9 +36,15 @@ body {
 
     --light-text-color : #ffffff;
 
+    --text-card-1 : rgba(6, 88, 241, 0.993);
+    --text-card-2 : rgb(255, 0, 242);
+    --text-card-3 : rgb(16, 136, 0);
+    --text-card-4 : rgb(240, 164, 0);
+
     /* สีพื้น */
     --btn-bg-color: rgb(212, 9, 212);
     --footer-bg-color: black;
+    --tip-bg-color : white;
 
     /* สีเงา */
     --header-shadow : 0 4px 8px rgba(0, 0, 0, 0.18);
@@ -47,6 +53,12 @@ body {
     /* สีขอบ */
     --border-color : rgb(255, 198, 75);
     --muted-text-color : rgba(0, 0, 0, 0.384);
+
+    /* สีกล่อง */
+    --card-1 : rgba(59, 128, 255, 0.658);
+    --card-2 : rgba(218, 0, 207, 0.527);
+    --card-3 : rgba(0, 201, 0, 0.432);
+    --card-4 : rgba(255, 182, 25, 0.616);
 }
 
 /* ====================================
@@ -167,7 +179,72 @@ nav a.active {
     color: var(--muted-text-color);
 }
 
+.tip-box {
+  background-color: var(--tip-bg-color); 
+  max-width: 1320px;   
+  margin: 0 auto;         
+  padding: 50px 30px;        
+  border-radius: 20px;       
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05); /* เงาบางนุ่มๆ */
+  margin-top: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.26);
+}
 
+.tip-header {
+    text-align: center;
+    margin: 20px;
+}
+
+.tip-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+.tip-card {
+    border: var(--border-color);
+    box-shadow: var(--card-shadow);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.tip-content p {
+    font-size: 14px;
+}
+
+.tip-content h3 {
+    padding: 10px;
+}
+
+.card-blue {
+    background-color: var(--card-1);
+}
+
+.card-purple {
+    background-color: var(--card-2);
+}
+
+.card-green {
+    background-color: var(--card-3);
+}
+
+.card-yellow {
+    background-color: var(--card-4);
+}
+
+.text-card-blue h3{
+    color: var(--text-card-1);
+}
+.text-card-purple h3{
+    color: var(--text-card-2);
+}
+.text-card-green h3{
+    color: var(--text-card-3);
+}
+.text-card-yellow h3{
+    color: var(--text-card-4);
+}
 
 /* ====================================
                Footer
