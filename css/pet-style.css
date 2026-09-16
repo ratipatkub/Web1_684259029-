@@ -179,72 +179,67 @@ nav a.active {
     color: var(--muted-text-color);
 }
 
-.tip-box {
+.info-section {
   background-color: var(--tip-bg-color); 
   max-width: 1320px;   
   margin: 0 auto;         
   padding: 50px 30px;        
   border-radius: 20px;       
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05); /* เงาบางนุ่มๆ */
+  box-shadow: var(--header-shadow);
   margin-top: 20px;
   border: 1px solid rgba(128, 128, 128, 0.26);
 }
 
-.tip-header {
+.info-title {
     text-align: center;
     margin: 20px;
 }
 
-.tip-grid {
+.info-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
 
-.tip-card {
+.info-card {
     border: var(--border-color);
     box-shadow: var(--card-shadow);
     border-radius: 20px;
     padding: 20px;
 }
 
-.tip-content p {
-    font-size: 14px;
-}
-
-.tip-content h3 {
-    padding: 10px;
-}
-
-.card-blue {
+.info-blue {
     background-color: var(--card-1);
 }
+.info-blue h3 {
+    color: var(--text-card-1);
+}
 
-.card-purple {
+.info-purple {
     background-color: var(--card-2);
 }
 
-.card-green {
+.info-purple h3{
+    color: var(--text-card-2);
+}
+
+.info-green {
     background-color: var(--card-3);
 }
 
-.card-yellow {
+.info-green h3{
+    color: var(--text-card-3);
+}
+
+.info-orange {
     background-color: var(--card-4);
 }
 
-.text-card-blue h3{
-    color: var(--text-card-1);
-}
-.text-card-purple h3{
-    color: var(--text-card-2);
-}
-.text-card-green h3{
-    color: var(--text-card-3);
-}
-.text-card-yellow h3{
+.info-orange h3 {
     color: var(--text-card-4);
 }
+
 
 /* ====================================
                Footer
