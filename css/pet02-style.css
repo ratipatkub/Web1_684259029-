@@ -1,0 +1,422 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: linear-gradient(135deg, #fef0e0 0%, #ffffff 50%, #fdffe8 100%);
+}
+
+.container {
+        max-width: 1320px;
+
+        margin: 0 auto;
+}
+
+:root {
+    /* สีหลักของเว็บ */
+    --primary-color : rgb(245, 151, 74);
+    --primary-dark-color : rgba(224, 115, 26, 0.664);
+    --secondary-color : rgb(248, 171, 27);
+
+
+    /* สีข้อความ */
+    --text-color : black;
+
+    --nav-text-color : #374151;
+
+    --light-text-color : #ffffff;
+
+    --text-card-1 : rgba(6, 88, 241, 0.993);
+    --text-card-2 : rgb(255, 0, 242);
+    --text-card-3 : rgb(16, 136, 0);
+    --text-card-4 : rgb(240, 164, 0);
+
+    /* สีพื้น */
+    --btn-bg-color: rgb(212, 9, 212);
+    --footer-bg-color: black;
+    --tip-bg-color : white;
+    --card-bg-color : white;
+    --muted-bg-color : rgba(0, 0, 0, 0.199);
+
+    /* สีเงา */
+    --header-shadow : 0 4px 8px rgba(0, 0, 0, 0.18);
+    --card-shadow : 0 3px 10px rgba(0, 0, 0, 0.18);
+
+    /* สีขอบ */
+    --border-color : rgba(255, 198, 75, 0.671);
+    --muted-text-color : rgba(0, 0, 0, 0.384);
+
+    /* สีกล่อง */
+    --card-1 : rgba(59, 128, 255, 0.658);
+    --card-2 : rgba(218, 0, 207, 0.527);
+    --card-3 : rgba(0, 201, 0, 0.432);
+    --card-4 : rgba(255, 182, 25, 0.616);
+}
+
+/* ====================================
+               Header
+=======================================*/
+
+.header {
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+
+    box-shadow: var(--header-shadow);
+    
+    position: sticky;
+    top: 0;
+
+    z-index: 999;
+}
+
+.header-content { 
+    text-align: center;
+    padding-block: 1.5rem;
+}
+
+.header-title {
+    color: var(--primary-color);
+
+    font-size: clamp(2rem, 5vw, 3rem);
+
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+.header-subtitle {
+    color: var(--muted-text-color);
+}
+
+/* ====================================
+               Nav
+=======================================*/
+
+.category-nav {
+    padding-block: 2rem;
+    text-align: center;
+}
+
+.category-nav label{
+    background-color: var(--card-bg-color);
+    color: var(--nav-text-color);
+
+    padding: 0.65rem 1.2rem;
+    box-shadow: var(--card-shadow);
+    border-radius: 999px;
+
+    margin: 0.3rem;
+
+    transition: transform 0.5s;
+    display: inline-block;
+}
+
+.category-nav label:hover {
+    transform: translateY(-10px);
+}
+
+/* ซ่อนปุ่ม radio */
+.filter-radio {
+    /* display: none; */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+/* ใส่สีให้กับ label ที่เลือก */
+#filter-all:checked ~ .category-nav label[for="filter-all"], 
+#filter-dog:checked ~ .category-nav label[for="filter-dog"], 
+#filter-cat:checked ~ .category-nav label[for="filter-cat"], 
+#filter-bird:checked ~ .category-nav label[for="filter-bird"], 
+#filter-fish:checked ~ .category-nav label[for="filter-fish"], 
+#filter-small-pet:checked ~ .category-nav label[for="filter-small-pet"]
+{
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+}
+
+/* ซ่อนหัวข้อหมวดหมู่ */
+
+.category-hide {
+    display: none;
+}
+
+/* แสดงหัวข้อหมวดหมู่ */
+
+#filter-all:checked ~ main .show-all, 
+#filter-dog:checked ~ main .show-dog, 
+#filter-cat:checked ~ main .show-cat, 
+#filter-bird:checked ~ main .show-bird, 
+#filter-fish:checked ~ main .show-fish, 
+#filter-small-pet:checked ~ main .show-small-pet
+{
+    display: inline;
+}
+
+
+/* ซ่อนการ์ดสัตว์ */
+#filter-dog:checked ~ main .pet-card,
+#filter-cat:checked ~ main .pet-card,
+#filter-bird:checked ~ main .pet-card,
+#filter-fish:checked ~ main .pet-card,
+#filter-small-pet:checked ~ main .pet-card
+{
+    display: none;
+}
+
+/* โชว์การ์ดสัตว์ */
+#filter-dog:checked ~ main .show-dog,
+#filter-cat:checked ~ main .show-cat,
+#filter-bird:checked ~ main .show-bird,
+#filter-fish:checked ~ main .show-fish,
+#filter-small-pet:checked ~ main .show-small-pet
+{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav a.active {
+    background-color: var(--btn-bg-color);
+    color: var(--light-text-color);
+}
+
+
+
+
+/* ====================================
+               Main
+=======================================*/
+
+.page-title {
+    text-align: center;
+    margin: 1.5rem;
+}
+
+.pet-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    
+}
+
+.pet-card {
+    border: var(--border-color);
+    box-shadow: var(--card-shadow);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+
+.pet-card:hover{
+    transform: translateY(-4px);
+    box-shadow: var(--header-shadow);
+}
+
+
+.pet-card img {
+    height: 16.25rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.pet-content {
+ padding: 1.25rem;
+}
+
+.pet-content h2{
+ color: var(--primary-dark-color);
+}
+
+.breed {
+    color: var(--muted-text-color);
+}
+
+.info-section {
+  background-color: var(--tip-bg-color); 
+  max-width: 1320px;   
+  margin: 0 auto;         
+  padding: 50px 30px;        
+  border-radius: 20px;       
+  box-shadow: var(--header-shadow);
+  margin-top: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.26);
+}
+
+.info-title {
+    text-align: center;
+    margin: 20px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+.info-card {
+    border: var(--border-color);
+    box-shadow: var(--card-shadow);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.info-blue {
+    background-color: var(--card-1);
+}
+.info-blue h3 {
+    color: var(--text-card-1);
+}
+
+.info-purple {
+    background-color: var(--card-2);
+}
+
+.info-purple h3{
+    color: var(--text-card-2);
+}
+
+.info-green {
+    background-color: var(--card-3);
+}
+
+.info-green h3{
+    color: var(--text-card-3);
+}
+
+.info-orange {
+    background-color: var(--card-4);
+}
+
+.info-orange h3 {
+    color: var(--text-card-4);
+}
+
+/* =========================================
+                      form-radio 
+=============================================   */
+
+.form-radio {
+  background-color: var(--tip-bg-color); 
+  /* max-width: 1320px;    */
+  /* margin: 0 auto;          */
+  padding: 2rem;        
+  border-radius: 20px;       
+  box-shadow: var(--header-shadow);
+  margin-top: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.26);
+}
+
+.form-radio h2{
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.form-radio p{
+    text-align: center;
+    color: var(--muted-text-color);
+
+    margin-bottom: 0.8rem;
+}
+
+.form-radio fieldset {
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.7rem;
+}
+
+.form-radio legend {
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+    
+    font-weight: bold;
+}
+
+.radio-option {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+
+    flex-wrap: wrap;
+}
+
+.radio-item {}
+
+.radio-item label {
+    background-color: var(--muted-bg-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+
+    color: var(--text-color);
+
+    cursor: pointer;
+}
+
+.radio-item input {
+    accent-color: var(--secondary-color);
+}
+
+.radio-item input:checked + label {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+}
+
+.reset-btn  {
+    display: block;
+    
+    
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+
+    cursor: pointer;
+    margin: 1.5rem auto 0;
+
+
+}
+
+/* ====================================
+               Footer
+=======================================*/
+
+footer {
+    background-color: var(--footer-bg-color);
+    text-align: center;
+
+    color: var(--light-text-color);
+
+    padding-block: 2rem;
+    margin-top: 2rem;
+}
+
+
+/* ====================================
+               Responsive
+=======================================*/

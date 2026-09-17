@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>คู่มือสัตว์เลี้ยง</title>
 
-    <link rel="stylesheet" href="../css/pet-style.css">
+    <link rel="stylesheet" href="../css/pet02-style.css">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -22,22 +22,43 @@
         </div>
     </header>
 
+    <!-- สร้าง radio bgn สำหรับเลือกสัตว์ -->
+
+
+        <input class="filter-radio" type="radio" id="filter-all" name="fav-pet">
+        <input class="filter-radio" type="radio" id="filter-dog" name="fav-pet">
+        <input class="filter-radio" type="radio" id="filter-cat" name="fav-pet">
+        <input class="filter-radio" type="radio" id="filter-bird" name="fav-pet">
+        <input class="filter-radio" type="radio" id="filter-fish" name="fav-pet">
+        <input class="filter-radio" type="radio" id="filter-small-pet" name="fav-pet">
+    
+    
+
+
     <!-- Nav Bar -->
-    <nav>
-        <a href="index.html" class="active"><i class="fa-solid fa-house"></i> ทั้งหมด</a>
-        <a href="dog.html"><i class="fa-solid fa-dog"></i> สุนัข</a>
-        <a href="cat.html"><i class="fa-solid fa-cat"></i> แมว</a>
-        <a href="bird.html"><i class="fa-solid fa-dove"></i> นก</a>
-        <a href="fish.html"><i class="fa-solid fa-fish"></i> ปลา</a>
-        <a href="small-pet.html"><i class="fa-solid fa-otter"></i> สัตว์ขนาดเล็ก</a>
+    <nav class="category-nav">
+        <label for="filter-all" class="active"><i class="fa-solid fa-house"></i> ทั้งหมด</label>
+        <label for="filter-dog"><i class="fa-solid fa-dog"></i> สุนัข</label>
+        <label for="filter-cat"><i class="fa-solid fa-cat"></i> แมว</label>
+        <label for="filter-bird"><i class="fa-solid fa-dove"></i> นก</label>
+        <label for="filter-fish"><i class="fa-solid fa-fish"></i> ปลา</label>
+        <label for="filter-small-pet"><i class="fa-solid fa-otter"></i> สัตว์ขนาดเล็ก</label>
     </nav>
 
 
     <!-- Main Section -->
     <main class="container">
-        <h2 class="page-title">สัตว์เลี้ยงทั้งหมด</h2>
+        <h2 class="page-title">
+            <span class="category-hide show-all">สัตว์เลี้ยงทั้งหมด</span>            
+            <span class="category-hide show-dog">หมวดหมู่สุนัข</span>            
+            <span class="category-hide show-cat">หมวดหมู่แมว</span>            
+            <span class="category-hide show-bird">หมวดหมู่นก</span>            
+            <span class="category-hide show-fish">หมวดหมู่ปลา</span>            
+            <span class="category-hide show-small-pet">หมวดหมู่สัตว์ขนาดเล็ก</span>            
+        </h2>
+
         <div class="pet-grid">
-            <article class="pet-card">
+            <article class="pet-card show-dog">
                 <img src="https://images.unsplash.com/photo-1734966213753-1b361564bab4?auto=format&amp;fit=crop&amp;w=1080&amp;q=80"
                     alt="โกลเด้น รีทรีฟเวอร์">
 
@@ -49,7 +70,7 @@
                 </div>
             </article>
 
-            <article class="pet-card">
+            <article class="pet-card show-dog">
                 <img src="https://images.unsplash.com/photo-1590419690008-905895e8fe0d?auto=format&amp;fit=crop&amp;w=1080&amp;q=80"
                     alt="ไซบีเรียน ฮัสกี้">
 
@@ -61,7 +82,7 @@
                 </div>
             </article>
 
-            <article class="pet-card">
+            <article class="pet-card show-cat">
                 <img src="https://images.unsplash.com/photo-1568152950566-c1bf43f4ab28?auto=format&amp;fit=crop&amp;w=1080&amp;q=80"
                     alt="แมวสยาม">
 
@@ -73,7 +94,7 @@
                 </div>
             </article>
 
-            <article class="pet-card">
+            <article class="pet-card show-cat">
                 <img src="https://images.unsplash.com/photo-1585137173132-cf49e10ad27d?auto=format&amp;fit=crop&amp;w=1080&amp;q=80"
                     alt="แมวเปอร์เซีย">
 
@@ -85,7 +106,7 @@
                 </div>
             </article>
 
-            <article class="pet-card">
+            <article class="pet-card show-bird">
                 <img src="https://images.unsplash.com/photo-1584888890205-9b49eaf0c660?auto=format&amp;fit=crop&amp;w=1080&amp;q=80"
                     alt="นกแก้วแมคคอว์">
 
@@ -97,7 +118,7 @@
                 </div>
             </article>
 
-            <article class="pet-card">
+            <article class="pet-card show-fish">
                 <img src="https://images.unsplash.com/photo-1592072467526-0506c6530493?auto=format&amp;fit=crop&amp;w=1080&amp;q=80"
                     alt="ปลาทอง">
 
@@ -109,7 +130,7 @@
                 </div>
             </article>
 
-            <article class="pet-card">
+            <article class="pet-card show-small-pet">
                 <img src="https://images.unsplash.com/photo-1622349817799-067c32295df2?auto=format&amp;fit=crop&amp;w=1080&amp;q=80"
                     alt="กระต่าย">
 
@@ -121,7 +142,7 @@
                 </div>
             </article>
 
-            <article class="pet-card">
+            <article class="pet-card show-small-pet">
                 <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&amp;fit=crop&amp;w=1080&amp;q=80"
                     alt="หนูแฮมสเตอร์">
 
@@ -161,6 +182,52 @@
                     </article>
                 </div>
             </section>
+
+            <!-- เรียนรู้การสร้าง radio button -->
+
+            <section class="form-radio">
+
+                <h2>ทดลองเลือกประเภทสัตว์ที่คุณสนใจ</h2>
+                <p>คลิกข้อความหรือปุ่มวงกลมเพื่อเลือกประเภทสัตว์ที่สนใจ</p>
+
+                <form action="" method="">
+                    <fieldset>
+                        <legend>เลือกประเภทสัตว์เลี้ยง</legend>
+
+                        <div class="radio-option">
+                            <div class="radio-item">
+                                <input type="radio" id="fav-dog" name="fav-pet" value="สุนัข" checked>
+                                <label for="fav-dog">สุนัข</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="fav-cat" name="fav-pet" value="แมว">
+                                <label for="fav-cat">แมว</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="fav-bird" name="fav-pet" value="นก">
+                                <label for="fav-bird">นก</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="fav-fish" name="fav-pet" value="ปลา">
+                                <label for="fav-fish">ปลา</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="fav-small-pet" name="fav-pet" value="สัตว์ขนาดเล็ก">
+                                <label for="fav-small-pet">สัตว์ขนาดเล็ก</label>
+                            </div>
+                        </div>
+
+
+                        <button type="reset" class="reset-btn">ล้างตัวเลือก</button>
+
+
+                    </fieldset>
+
+
+
+                </form>
+            </section>
+
     </main>
     
 
